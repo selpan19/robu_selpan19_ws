@@ -3,8 +3,8 @@
 <package format="3">
   <name>robu</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="robu@todo.todo">robu</maintainer>
+  <description>ROBU Uebungen</description>
+  <maintainer email="selpan19@htl-kaindorf.at">robu</maintainer>
   <license>TODO: License declaration</license>
 
   <test_depend>ament_copyright</test_depend>
