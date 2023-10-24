@@ -75,4 +75,11 @@ class WallFollower(rclpy.Node):
 
 
 def main(args=None):
-    print("Hello from Wallfollower!")
+    rclpy.init(args = args)
+    wallfollower = WallFollower()
+
+
+    rclpy.spin(wallfollower)
+
+    wallfollower.destroy_node()
+    rclpy.shutdown()
