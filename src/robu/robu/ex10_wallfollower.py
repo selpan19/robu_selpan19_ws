@@ -73,7 +73,6 @@ class WallFollower(rclpy.Node):
               "rd: %.2f m" % self.rear_dist
               )
 
-
 def main(args=None):
     rclpy.init(args = args)
     wallfollower = WallFollower()
