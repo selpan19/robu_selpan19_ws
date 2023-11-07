@@ -1,6 +1,7 @@
 import math
 import rclpy
 
+from rclpy.node import Node
 from std_msgs.msg import String
 from geometry_msgs.msg import Twist
 from std_msgs.msg import LaserScan
@@ -27,7 +28,7 @@ class WallfollowerStates(IntEnum):
     WF_STATE_ROTATE2WALL =2,
     WF_STATE_FOLLOWWALL = 3
 
-class WallFollower(rclpy.Node):
+class WallFollower(Node):
     def __init__(self):
         super().__init__('WallFollower')
         self.scan_subscriber = self.create_subscription(LaserScan, "/scan", self.scan_callback, qos_profile_sensor_data)
