@@ -4,7 +4,7 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 from geometry_msgs.msg import Twist
-from std_msgs.msg import LaserScan
+from sensor_msgs.msg import LaserScan
 
 from rclpy.qos import qos_profile_sensor_data
 
@@ -40,6 +40,7 @@ class WallFollower(Node):
         self.rightfront_dist = 9999999.9
         self.right_dist = 9999999.9
         self.rear_dist = 9999999.9
+        self.distances = []
 
         self.wallfollower_state = WallfollowerStates.WF_STATE_DETECTWALL
 
@@ -51,12 +52,40 @@ class WallFollower(Node):
 
         self.dist_thresh_wf = 0.3
         self.dist_hysteresis_wf = 0.02
-        
+
+        self.dist_laser_offset = 0.03
+
+        self.valid_lidar_data = False
         self.timer = self.create_timer(0.2, self.timer_callback)
 
-        def timer_callback(self):
-            pass
+    def timer_callback(self):
+        if self.valid_lidar_data:            #Beim erstmaligen Aufruf liegen noch keine LidarDaten vor
+            self.follow_wall()
         
+    def follow_wall(self):
+        msg = Twist()
+        msg.linear.x = 0.0
+        msg.linear.y = 0.0
+        msg.linear.z = 0.0
+
+        msg.angular.x = 0.0
+        msg.angular.y = 0.0
+        msg.angular.z = 0.0
+
+        if self.wallfollower_state == WallfollowerStates.WF_STATE_DETECTWALL:
+            dist_min = min(self.distances)
+            #Drehe Roboter solange bis auf der X-Achse der Mindestabstand erscheint
+            if(self.front_dist > (dist_min + self.dist_laser_offset)):
+                #Wenn der Roboter kurz vor dem Mindestabstand ist, verringert dieser die Drehgeschwindigkeit
+                if abs(self.front_dist - dist_min) < 0.2:
+                    msg.angular.z = self.turning_speed_wf_slow
+                else: 
+                    msg.angular.z = self.turning_speed_wf_fast
+            else:
+                print("WF_STATE_DRIVE2WALL")
+                self.wallfollower_state = WallfollowerStates.WF_STATE_DRIVE2WALL
+
+
     def scan_callback(self, msg):
         
         self.left_dist = msg.ranges[ROBOT_DIRECTION_LEFT_INDEX]
@@ -65,6 +94,7 @@ class WallFollower(Node):
         self.rightfront_dist = msg.ranges[ROBOT_DIRECTION_RIGHTFRONT_INDEX]
         self.right_dist = msg.ranges[ROBOT_DIRECTION_RIGHT_INDEX]
         self.rear_dist = msg.ranges[ROBOT_DIRECTION_REAR_INDEX]
+        self.distances = msg.ranges
 
         print("ld: %.2f m" % self.left_dist,
               "lfd: %.2f m" % self.leftfront_dist,
