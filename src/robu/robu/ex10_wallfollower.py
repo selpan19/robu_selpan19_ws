@@ -127,6 +127,7 @@ class WallFollower(Node):
 
         print(msg)
         self.cmd_vel_publisher.publish(msg)
+        
 
     def align_left(self):
         fl = self.distances[ROBOT_DIRECTION_LEFTFRONT_INDEX]
