@@ -1,15 +1,16 @@
 Kompilieren
-colcon.build im work Ordner
+<colcon build>
+    im workspace
 
 Setup.bash installieren
-source install/setup.bash 
+<source install/setup.bash>
 
 Wallfollower starten
-ros2 run robu wallfollower
+<ros2 run robu wallfollower>
 
 Fernsteuerung starten:
-ros2 run turtlebot3_teleop teleop_keyboard
+<ros2 run turtlebot3_teleop teleop_keyboard>
 
 Gazebo starten:
-ros2 launch turtlebot3_gazebo turtlebot3_dqn_stage1.launch.py
+<ros2 launch turtlebot3_gazebo turtlebot3_dqn_stage1.launch.py>
 
