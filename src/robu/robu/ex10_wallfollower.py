@@ -35,7 +35,7 @@ class WallFollower(Node):
         self.scan_subscriber = self.create_subscription(LaserScan, "/scan", self.scan_callback, qos_profile_sensor_data)
         self.cmd_vel_publisher = self.create_publisher(Twist, "cmd_vel", qos_profile_sensor_data)
 
-        self.left_dist = 9999999.9 # Initialisiere den Varible auf einen ungueltigen Wert
+        self.left_dist = 9999999.9 # Initialisiere den Varible auf einen ungueltigen Wert 
         self.leftfront_dist = 9999999.9
         self.front_dist = 9999999.9
         self.rightfront_dist = 9999999.9
