@@ -17,14 +17,5 @@ Gazebo starten:
 
 
 
-
-
-
-
-
-
-
-
-
 im colcon build fenster wallfollower starten
 in anderen 2 teleop und gazebo
