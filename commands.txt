@@ -19,3 +19,13 @@ Gazebo starten:
 
 im colcon build fenster wallfollower starten
 in anderen 2 teleop und gazebo
+
+
+ros2 param list
+
+ros2 param set /MinimalParameter my_parameter "Hallo"
+ros2 param get /MinimalParameter my_parameter 
+ros2 param get /MinimalParameter my_parameter 
+
+export ROS_DOMAIN_ID=23
+
