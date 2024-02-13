@@ -29,3 +29,23 @@ ros2 param get /MinimalParameter my_parameter
 
 export ROS_DOMAIN_ID=23
 
+Alle Nodes anzeigen
+ros2 node list
+
+
+
+//Actions
+https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions.html
+
+
+Alle Infos zu einer Node
+ros2 node info /turtlesim
+ros2 node info /teleop_turtle
+
+Alle Actions anzeigen
+ros2 action list
+
+Alle Actions anzeigen + Datentyp
+ros2 action list -t
+
+ros2 action info
