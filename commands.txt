@@ -49,4 +49,3 @@ Alle Actions anzeigen + Datentyp
 ros2 action list -t
 
 ros2 action info
-
