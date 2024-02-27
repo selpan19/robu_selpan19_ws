@@ -49,3 +49,7 @@ Alle Actions anzeigen + Datentyp
 ros2 action list -t
 
 ros2 action info
+
+
+//Action Server + Client
+https://docs.ros.org/en/foxy/Tutorials/Intermediate/Writing-an-Action-Server-Client/Py.html

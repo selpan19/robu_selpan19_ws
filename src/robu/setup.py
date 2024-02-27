@@ -23,7 +23,8 @@ setup(
             'wallfollower = robu.ex10_wallfollower:main',
             'mypublisher = robu.publisher_member_function:main',
             'mysubscriber = robu.subscriber_member_function:main',
-            'myparameter = robu.ex11_parameter:main'
+            'myparameter = robu.ex11_parameter:main',
+            'fibonacci_server = robu.ex12_fibonacci_server:main'
         ],
     },
 )
