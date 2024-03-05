@@ -34,6 +34,10 @@ ros2 node list
 
 
 
+//Github
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
 //Actions
 https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions.html
 
@@ -56,7 +60,5 @@ https://docs.ros.org/en/foxy/Tutorials/Intermediate/Writing-an-Action-Server-Cli
 
 
 //Dienst ohne Client senden
-ros2 actoin send_goal
+ros2 action send_goal --feedback fibonacci action_tutorials_interfaces/action/Fibonacci "{order: 5}"
 
-git config --global user.email "you@example.com"
-git config --global user.name "Your Name"
