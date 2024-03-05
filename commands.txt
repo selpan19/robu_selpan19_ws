@@ -53,3 +53,10 @@ ros2 action info
 
 //Action Server + Client
 https://docs.ros.org/en/foxy/Tutorials/Intermediate/Writing-an-Action-Server-Client/Py.html
+
+
+//Dienst ohne Client senden
+ros2 actoin send_goal
+
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
