@@ -1,0 +1,13 @@
+cd work
+cd robu_selpan19_ws-main.zip
+
+export ROS_DOMAIN_ID 23
+
+colcon build
+source install/setup.bash
+
+ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:=True
+
+ros2 run turtlebot3_teleop teleop_keyboard
+
+ros2 run nav2_map_server map_saver_cli -f ~/work/robu_selpan19_ws/src/robu/maps/tb3_world/tb3_world

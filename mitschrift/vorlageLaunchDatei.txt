@@ -1,0 +1,17 @@
+https://docs.ros.org/en/foxy/Tutorials/Intermediate/Launch/Creating-Launch-Files.html
+
+import os
+
+from ament_index_python.packages import get_package_share_directory #zugriff auf fremdes Paket, gibt Speicherort
+
+from launch import LaunchDescription #Beschreibung was gestastert werden soll
+
+from launch.actions import ExecuteProcess, DeclareLaunchArgument, IncludeLaunchDescription
+
+from launch_ros.actions import Node
+
+from launch.conditions import IfCondition
+
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+
+from launch.substitutions import LaunchConfiguration, PythonExpression
