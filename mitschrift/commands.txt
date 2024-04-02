@@ -64,3 +64,7 @@ ros2 action send_goal fibonacci robu_interfaces/action/Fibonacci "{order: 10}"
 ros2 action send_goal <servername> <Datentyp> <Daten>
 
 --feedback ==> anhängen für feedback
+
+
+//Launch Datei starten mit Launchargument
+ros2 launch robu use_rviz
