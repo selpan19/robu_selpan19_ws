@@ -4,7 +4,7 @@
   <name>robu_interfaces</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="selpan19@htl-kaindorf.at">robu</maintainer>
+  <maintainer email="li@htl-kaindorf.at">robu</maintainer>
   <license>TODO: License declaration</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
@@ -16,10 +16,10 @@
     <build_type>ament_cmake</build_type>
   </export>
 
-<buildtool_depend>rosidl_default_generators</buildtool_depend>
+  <buildtool_depend>rosidl_default_generators</buildtool_depend>
 
-<depend>action_msgs</depend>
+  <depend>action_msgs</depend>
 
-<member_of_group>rosidl_interface_packages</member_of_group>
+  <member_of_group>rosidl_interface_packages</member_of_group>
 
 </package>

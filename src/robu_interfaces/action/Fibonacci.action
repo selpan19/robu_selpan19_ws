@@ -1,8 +1,5 @@
-#goal
-int32 order
+int32 order         #GOAL
 ---
-#result
-int32[] sequence
+int32[] sequence    #RESPONSE
 ---
-#feedback
-int32[] partial_sequence
+int32[] partial_sequence    #FEEDBACK

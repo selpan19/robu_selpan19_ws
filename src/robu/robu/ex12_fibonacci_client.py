@@ -41,13 +41,12 @@ class FibonacciActionClient(Node):
         feedback = feedback_msg.feedback
         self.get_logger().info('Received feedback: {0}'.format(feedback.partial_sequence))
 
-
 def main(args=None):
     rclpy.init(args=args)
 
     action_client = FibonacciActionClient()
 
-    action_client.send_goal(10)
+    action_client.send_goal(5)
 
     rclpy.spin(action_client)
 

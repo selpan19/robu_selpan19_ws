@@ -1,13 +1,9 @@
-#https://docs.ros.org/en/foxy/Tutorials/Intermediate/Writing-an-Action-Server-Client/Py.html
-
 import time
 import rclpy
 from rclpy.action import ActionServer
 from rclpy.node import Node
 
-#Importiert Schnittstelle
 from robu_interfaces.action import Fibonacci
-
 
 
 class FibonacciActionServer(Node):

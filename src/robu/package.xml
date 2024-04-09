@@ -3,9 +3,9 @@
 <package format="3">
   <name>robu</name>
   <version>0.0.0</version>
-  <description>ROBU Uebungen</description>
-  <maintainer email="selpan19@htl-kaindorf.at">robu</maintainer>
-  <license>TODO: License declaration</license>
+  <description>Examples from the ROBU teaching subject</description>
+  <maintainer email="li@htl-kaindorf.at">robu</maintainer>
+  <license>Creative Commons (CC)</license>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
