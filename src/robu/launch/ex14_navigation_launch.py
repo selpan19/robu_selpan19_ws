@@ -46,7 +46,7 @@ def generate_launch_description():
     headless = LaunchConfiguration('headless')
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
 
-    envar_cmd = SetEnvironmentVariable('ROS_DOMAIN_ID', '100')
+    envar_cmd = SetEnvironmentVariable('ROS_DOMAIN_ID', '23')
                            
     # Declare the launch arguments
     declare_use_rviz_cmd = DeclareLaunchArgument(
@@ -126,5 +126,6 @@ def generate_launch_description():
     ld.add_action(start_robot_state_publisher_cmd)
     ld.add_action(rviz_cmd)
     ld.add_action(bringup_cmd)
+    
     
     return ld
