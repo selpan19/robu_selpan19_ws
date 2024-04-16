@@ -29,7 +29,8 @@ setup(
             'mysubscriber = robu.mysubscriber:main',
             'myparameter = robu.ex11_parameter:main',
             'fibonacci_server = robu.ex12_fibonacci_server:main',
-            'fibonacci_client = robu.ex12_fibonacci_client:main'
+            'fibonacci_client = robu.ex12_fibonacci_client:main',
+            'nav2pose = robu.ex14_navigation:main'
         ],
     },
 )
